@@ -246,118 +246,208 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.major_ideologies = ['socialist', 'nationalist', 'republican', 'liberal', 'reactionary', 'moderate'];
+Q.major_ideologies = ['socialist', 'nationalist', 'republican', 'liberal', 'reactionary', 'moderate', 'communist', 'populist_nationalist'];
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+// old version
 Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 Q.parties_graph = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+// new version (won't work until we figure out base support for new parties)
+/*
+Q.parties = ['spd', 'kpd', 'z', 'bvp', 'dhp', 'ddp', 'dvp', 'dnvp', 'nsdap', 'wp', 'vrp', 'dbp', 'cnblp', 'other'];
+Q.parties_graph = ['spd', 'kpd', 'z', 'bvp', 'dhp', 'ddp', 'dvp', 'dnvp', 'nsdap', 'wp', 'vrp', 'dbp', 'cnblp', 'other'];
+*/
 
+Q.communist_support = 0;
 Q.socialist_support = 0;
 Q.nationalist_support = 0;
 Q.republican_support = 0;
 Q.liberal_support = 0;
 Q.reactionary_support = 0;
 Q.moderate_support = 0;
+Q.populist_nationalist_support = 0;
 
 // ideology per party
+Q.spd_communist = 0;
 Q.spd_socialist = 0.6;
 Q.spd_nationalist = 0;
 Q.spd_republican = 0.4;
 Q.spd_liberal = 0;
 Q.spd_reactionary = 0;
 Q.spd_moderate = 0;
+Q.spd_populist_nationalist = 0;
 
+Q.kpd_communist = 0;
 Q.kpd_socialist = 1;
 Q.kpd_nationalist = 0
 Q.kpd_republican = 0;
 Q.kpd_liberal = 0;
 Q.kpd_reactionary = 0;
 Q.kpd_moderate = 0;
+Q.kpd_populist_nationalist = 0;
 
+Q.z_communist = 0;
 Q.z_socialist = 0;
 Q.z_nationalist = 0;
 Q.z_republican = 0.6;
 Q.z_liberal = 0;
 Q.z_reactionary = 0;
 Q.z_moderate = 0.4;
+Q.z_populist_nationalist = 0;
 
+Q.ddp_communist = 0;
 Q.ddp_socialist = 0;
 Q.ddp_nationalist = 0;
 Q.ddp_republican = 0.5;
 Q.ddp_liberal = 0.4;
 Q.ddp_reactionary = 0;
 Q.ddp_moderate = 0.1;
+Q.ddp_populist_nationalist = 0;
 
+Q.dvp_communist = 0;
 Q.dvp_socialist = 0;
 Q.dvp_nationalist = 0.1;
 Q.dvp_republican = 0.2;
 Q.dvp_liberal = 0.4;
 Q.dvp_reactionary = 0.2;
 Q.dvp_moderate = 0.1;
+Q.dvp_populist_nationalist = 0;
 
+Q.dnvp_communist = 0;
 Q.dnvp_socialist = 0;
 Q.dnvp_nationalist = 0.5;
 Q.dnvp_republican = 0;
 Q.dnvp_liberal = 0;
 Q.dnvp_reactionary = 0.5;
 Q.dnvp_moderate = 0;
+Q.dnvp_populist_nationalist = 0;
 
+Q.nsdap_communist = 0;
 Q.nsdap_socialist = 0;
 Q.nsdap_nationalist = 1;
 Q.nsdap_republican = 0;
 Q.nsdap_liberal = 0;
 Q.nsdap_reactionary = 0;
 Q.nsdap_moderate = 0;
+Q.nsdap_populist_nationalist = 0;
 
+Q.wp_communist = 0;
+Q.wp_socialist = 0;
+Q.wp_nationalist = 0;
+Q.wp_republican = 0;
+Q.wp_liberal = 0;
+Q.wp_reactionary = 0;
+Q.wp_moderate = 0;
+Q.wp_populist_nationalist = 0;
+
+Q.cnblp_communist = 0;
+Q.cnblp_socialist = 0;
+Q.cnblp_nationalist = 0;
+Q.cnblp_republican = 0;
+Q.cnblp_liberal = 0;
+Q.cnblp_reactionary = 0;
+Q.cnblp_moderate = 0;
+Q.cnblp_populist_nationalist = 0;
+
+Q.vrp_communist = 0;
+Q.vrp_socialist = 0;
+Q.vrp_nationalist = 0;
+Q.vrp_republican = 0;
+Q.vrp_liberal = 0;
+Q.vrp_reactionary = 0;
+Q.vrp_moderate = 0;
+Q.vrp_populist_nationalist = 0;
+
+Q.dhp_communist = 0;
+Q.dhp_socialist = 0;
+Q.dhp_nationalist = 0;
+Q.dhp_republican = 0;
+Q.dhp_liberal = 0;
+Q.dhp_reactionary = 0;
+Q.dhp_moderate = 0;
+Q.dhp_populist_nationalist = 0;
+
+Q.bvp_communist = 0;
+Q.bvp_socialist = 0;
+Q.bvp_nationalist = 0;
+Q.bvp_republican = 0;
+Q.bvp_liberal = 0;
+Q.bvp_reactionary = 0;
+Q.bvp_moderate = 0;
+Q.bvp_populist_nationalist = 0;
+
+Q.dbp_communist = 0;
+Q.dbp_socialist = 0;
+Q.dbp_nationalist = 0;
+Q.dbp_republican = 0;
+Q.dbp_liberal = 0;
+Q.dbp_reactionary = 0;
+Q.dbp_moderate = 0;
+Q.dbp_populist_nationalist = 0;
+
+Q.other_communist = 0;
 Q.other_socialist = 0;
 Q.other_nationalist = 0;
 Q.other_republican = 0;
 Q.other_liberal = 0;
 Q.other_reactionary = 0;
 Q.other_moderate = 1;
+Q.other_populist_nationalist = 0;
 
 // ideology per class
 
+Q.workers_communist = 0.4;
 Q.workers_socialist = 1;
-Q.workers_nationalist = 0.5;
-Q.workers_republican = 0.8;
-Q.workers_liberal = 0.3;
-Q.workers_reactionary = 0.3;
-Q.workers_moderate = 0.5;
+Q.workers_nationalist = 0.2;
+Q.workers_republican = 0.5;
+Q.workers_liberal = 0.1;
+Q.workers_reactionary = 0.1;
+Q.workers_moderate = 0.1;
+Q.workers_populist_nationalist = 0.4;
 
+Q.new_middle_communist = 0.2;
 Q.new_middle_socialist = 0.5;
 Q.new_middle_nationalist = 0.9;
 Q.new_middle_republican = 1;
 Q.new_middle_liberal = 1;
 Q.new_middle_reactionary = 0.5;
 Q.new_middle_moderate = 0.9;
+Q.new_middle_populist_nationalist = 0.3;
 
+Q.new_middle_communist = 0.1;
 Q.old_middle_socialist = 0.2;
 Q.old_middle_nationalist = 1;
 Q.old_middle_republican = 0.8;
 Q.old_middle_liberal = 1;
 Q.old_middle_reactionary = 1;
 Q.old_middle_moderate = 1;
+Q.new_middle_populist_nationalist = 0.2;
 
+Q.rural_communist = 0.1;
 Q.rural_socialist = 0.2;
 Q.rural_nationalist = 1;
 Q.rural_republican = 0.5;
 Q.rural_liberal = 0.5;
 Q.rural_reactionary = 1;
 Q.rural_moderate = 0.9;
+Q.rural_populist_nationalist = 0.2;
 
-Q.unemployed_socialist = 1;
+Q.unemployed_communist = 0.1;
+Q.unemployed_socialist = 0.2;
 Q.unemployed_nationalist = 0.7;
 Q.unemployed_republican = 0.5;
 Q.unemployed_liberal = 0.3;
 Q.unemployed_reactionary = 0.3;
 Q.unemployed_moderate = 0.5;
+Q.unemployed_populist_nationalist = 1;
 
+Q.catholics_communist = 0.2;
 Q.catholics_socialist = 0.5;
 Q.catholics_nationalist = 0.6;
 Q.catholics_republican = 0.8;
 Q.catholics_liberal = 0.6;
 Q.catholics_reactionary = 0.8;
 Q.catholics_moderate = 1;
+Q.unemployed_populist_nationalist = 1;
 
 Q.sapd_formed = 0;
 Q.dnf_formed = 0;
