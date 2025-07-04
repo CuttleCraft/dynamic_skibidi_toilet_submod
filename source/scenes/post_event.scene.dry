@@ -5009,6 +5009,8 @@ if (Q.in_social_catholic_coalition_prussia || Q.in_social_liberal_coalition_prus
     Q.spd_prussia = 0;
 }
 
+// Experimental party support system
+
 for (var party of Q.parties) {
     var total_id = 0;
     for (var id of Q.major_ideologies) {
