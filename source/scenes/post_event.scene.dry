@@ -5009,6 +5009,15 @@ if (Q.in_social_catholic_coalition_prussia || Q.in_social_liberal_coalition_prus
     Q.spd_prussia = 0;
 }
 
+for var id of (Q.ideologies) {
+    for var c of (Q.classes) {
+        for var party of (Q.parties) {
+            Q[party+'_'+c] += (Q[party+'_'+id] * Q[id+'_support']);
+        }
+    }
+    Q[id+'_support'] = 0;
+}
+
 for (var c of Q.classes) {
     var class_votes = 0;
     for (var party of Q.parties) {
