@@ -246,10 +246,118 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.ideologies = ['socialist', 'nationalist', 'republican', 'liberal', 'reactionary', 'moderate'];
+Q.major_ideologies = ['socialist', 'nationalist', 'republican', 'liberal', 'reactionary', 'moderate'];
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
 Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 Q.parties_graph = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+
+Q.socialist_support = 0;
+Q.nationalist_support = 0;
+Q.republican_support = 0;
+Q.liberal_support = 0;
+Q.reactionary_support = 0;
+Q.moderate_support = 0;
+
+// ideology per party
+Q.spd_socialist = 0.6;
+Q.spd_nationalist = 0;
+Q.spd_republican = 0.4;
+Q.spd_liberal = 0;
+Q.spd_reactionary = 0;
+Q.spd_moderate = 0;
+
+Q.kpd_socialist = 1;
+Q.kpd_nationalist = 0
+Q.kpd_republican = 0;
+Q.kpd_liberal = 0;
+Q.kpd_reactionary = 0;
+Q.kpd_moderate = 0;
+
+Q.z_socialist = 0;
+Q.z_nationalist = 0;
+Q.z_republican = 0.6;
+Q.z_liberal = 0;
+Q.z_reactionary = 0;
+Q.z_moderate = 0.4;
+
+Q.ddp_socialist = 0;
+Q.ddp_nationalist = 0;
+Q.ddp_republican = 0.5;
+Q.ddp_liberal = 0.4;
+Q.ddp_reactionary = 0;
+Q.ddp_moderate = 0.1;
+
+Q.dvp_socialist = 0;
+Q.dvp_nationalist = 0.1;
+Q.dvp_republican = 0.2;
+Q.dvp_liberal = 0.4;
+Q.dvp_reactionary = 0.2;
+Q.dvp_moderate = 0.1;
+
+Q.dnvp_socialist = 0;
+Q.dnvp_nationalist = 0.5;
+Q.dnvp_republican = 0;
+Q.dnvp_liberal = 0;
+Q.dnvp_reactionary = 0.5;
+Q.dnvp_moderate = 0;
+
+Q.nsdap_socialist = 0;
+Q.nsdap_nationalist = 1;
+Q.nsdap_republican = 0;
+Q.nsdap_liberal = 0;
+Q.nsdap_reactionary = 0;
+Q.nsdap_moderate = 0;
+
+Q.other_socialist = 0;
+Q.other_nationalist = 0;
+Q.other_republican = 0;
+Q.other_liberal = 0;
+Q.other_reactionary = 0;
+Q.other_moderate = 1;
+
+// ideology per class
+
+Q.workers_socialist = 1;
+Q.workers_nationalist = 0.5;
+Q.workers_republican = 0.8;
+Q.workers_liberal = 0.3;
+Q.workers_reactionary = 0.3;
+Q.workers_moderate = 0.5;
+
+Q.new_middle_socialist = 0.5;
+Q.new_middle_nationalist = 0.9;
+Q.new_middle_republican = 1;
+Q.new_middle_liberal = 1;
+Q.new_middle_reactionary = 0.5;
+Q.new_middle_moderate = 0.9;
+
+Q.old_middle_socialist = 0.2;
+Q.old_middle_nationalist = 1;
+Q.old_middle_republican = 0.8;
+Q.old_middle_liberal = 1;
+Q.old_middle_reactionary = 1;
+Q.old_middle_moderate = 1;
+
+Q.rural_socialist = 0.2;
+Q.rural_nationalist = 1;
+Q.rural_republican = 0.5;
+Q.rural_liberal = 0.5;
+Q.rural_reactionary = 1;
+Q.rural_moderate = 0.9;
+
+Q.unemployed_socialist = 1;
+Q.unemployed_nationalist = 0.7;
+Q.unemployed_republican = 0.5;
+Q.unemployed_liberal = 0.3;
+Q.unemployed_reactionary = 0.3;
+Q.unemployed_moderate = 0.5;
+
+Q.catholics_socialist = 0.5;
+Q.catholics_nationalist = 0.6;
+Q.catholics_republican = 0.8;
+Q.catholics_liberal = 0.6;
+Q.catholics_reactionary = 0.8;
+Q.catholics_moderate = 1;
 
 Q.sapd_formed = 0;
 Q.dnf_formed = 0;
@@ -257,6 +365,62 @@ Q.dnef_formed = 0;
 Q.kvp_formed = 0;
 Q.lvp_formed = 0;
 Q.cvp_formed = 0;
+
+// _fluidity
+
+Q.workers_spd_fluidity = 0.8;
+Q.workers_kpd_fluidity = 1;
+Q.workers_z_fluidity = 0.2;
+Q.workers_ddp_fluidity = 1;
+Q.workers_dvp_fluidity = 1;
+Q.workers_dnvp_fluidity = 1;
+Q.workers_nsdap_fluidity = 1;
+Q.workers_other_fluidity = 1;
+
+Q.new_middle_spd_fluidity = 0.6;
+Q.new_middle_kpd_fluidity = 0.05;
+Q.new_middle_z_fluidity = 0.5;
+Q.new_middle_ddp_fluidity = 1;
+Q.new_middle_dvp_fluidity = 1;
+Q.new_middle_dnvp_fluidity = 1;
+Q.new_middle_nsdap_fluidity = 1;
+Q.new_middle_other_fluidity = 1;
+
+Q.old_middle_spd_fluidity = 0.5;
+Q.old_middle_kpd_fluidity = 0;
+Q.old_middle_z_fluidity = 0.5;
+Q.old_middle_ddp_fluidity = 1;
+Q.old_middle_dvp_fluidity = 1;
+Q.old_middle_dnvp_fluidity = 1;
+Q.old_middle_nsdap_fluidity = 1;
+Q.old_middle_other_fluidity = 1;
+
+Q.rural_spd_fluidity = 0.5;
+Q.rural_kpd_fluidity = 0;
+Q.rural_z_fluidity = 0.5;
+Q.rural_ddp_fluidity = 1;
+Q.rural_dvp_fluidity = 1;
+Q.rural_dnvp_fluidity = 1;
+Q.rural_nsdap_fluidity = 1;
+Q.rural_other_fluidity = 1;
+
+Q.unemployed_spd_fluidity = 1;
+Q.unemployed_kpd_fluidity = 0.8;
+Q.unemployed_z_fluidity = 1;
+Q.unemployed_ddp_fluidity = 1;
+Q.unemployed_dvp_fluidity = 1;
+Q.unemployed_dnvp_fluidity = 1;
+Q.unemployed_nsdap_fluidity = 1;
+Q.unemployed_other_fluidity = 1;
+
+Q.catholics_spd_fluidity = 0.8;
+Q.catholics_kpd_fluidity = 0.5;
+Q.catholics_z_fluidity = 0.5;
+Q.catholics_ddp_fluidity = 0.5;
+Q.catholics_dvp_fluidity = 0.5;
+Q.catholics_dnvp_fluidity = 0.5;
+Q.catholics_nsdap_fluidity = 0.5;
+Q.catholics_other_fluidity = 0.8;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
