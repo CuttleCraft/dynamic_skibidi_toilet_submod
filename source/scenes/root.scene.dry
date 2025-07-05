@@ -447,7 +447,7 @@ Q.catholics_republican = 0.8;
 Q.catholics_liberal = 0.6;
 Q.catholics_reactionary = 0.8;
 Q.catholics_moderate = 1;
-Q.unemployed_populist_nationalist = 1;
+Q.catholics_populist_nationalist = 1;
 
 Q.sapd_formed = 0;
 Q.dnf_formed = 0;
@@ -516,21 +516,33 @@ Q.catholics_other_fluidity = 0.8;
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_spd = 55;
 Q.workers_kpd = 22;
-Q.workers_z = 5;
+Q.workers_z = 4;
 Q.workers_ddp = 2;
 Q.workers_dvp = 0;
 Q.workers_dnvp = 6;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
+Q.workers_dhp = 5;
+Q.workers_wp = 2;
+Q.workers_vrp = 2;
+Q.workers_dbp = 0;
+Q.workers_cnblp = 1;
+Q.workers_bvp = 1;
 
 Q.new_middle_spd = 8;
 Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
+Q.new_middle_z = 8;
 Q.new_middle_ddp = 23;
 Q.new_middle_dvp = 22;
 Q.new_middle_dnvp = 10;
 Q.new_middle_nsdap = 4;
 Q.new_middle_other = 22;
+Q.new_middle_dhp = 2;
+Q.new_middle_wp = 15;
+Q.new_middle_vrp = 5;
+Q.new_middle_dbp = 0;
+Q.new_middle_cnblp = 0;
+Q.new_middle_bvp = 2;
 
 Q.old_middle_spd = 4;
 Q.old_middle_kpd = 0;
