@@ -11,7 +11,7 @@ go-to: start_menu_2
 @start_menu_2
 
 - @start_1: Start game
-- @modinfo: Mod Info
+- @modinfo: Mod Info - Last Updated 2025/07/11
 - @credits: Credits
 - @game_over.achievements
 
@@ -24,7 +24,7 @@ go-to: start if achievement_game_completed; pls_player if not achievement_game_c
 
 Read.
 
-- @modinfo.infotext: Mod Info
+- @modinfo.infotext: Mod Info - Last Updated 2025/07/11
 
 
 @start
@@ -629,6 +629,8 @@ Q.bvp_r = 3.9;
 Q.wp_r = 2.4;
 Q.cnblp_r = 1.7;
 Q.true_other_r = 1.8;
+Q.reichstag_size = 4.93;
+Q.landtag_size = 4.5;
 
 // diff from prev
 Q.old_spd_r = 26.5;
@@ -1043,7 +1045,6 @@ Q.advisor_action_timer = 0;
 // party affairs timers
 Q.confronting_nazis_timer = 0;
 Q.crisis_program_timer = 0;
-Q.emergency_fundraising_timer = 0;
 Q.fundraising_timer = 0;
 Q.ideology_timer = 0;
 Q.inter_party_relationships_timer = 0;
@@ -1259,6 +1260,7 @@ Q.schwarze_null = 1;
 Q.notwendigkeit = 1;
 Q.gov_burden_fail = 0;
 Q.prussia_force_timer = 0;
+Q.emergency_used = 0;
 
 // rubicon
 Q.hindenburg_schleicher_r = 5;
@@ -1455,7 +1457,9 @@ const achievements = [
   "achievement_champagner_sozialisten",
   "achievement_stabile_demokratie",
   "achievement_neue_geschaftsfuhrung",
-  "achievement_rotes_bayern"
+  "achievement_rotes_bayern",
+  "achievement_1919_geracht",
+  "achievement_nach_der_spd_wir"
 ];
 
 Q.unlockedCount = achievements.filter(key => Q[key] === 1).length;
@@ -1566,7 +1570,6 @@ Here, you can test your skills.
 
 - @joever_mode
 - @hitler_mode
-- @wacky_weimar
 - @start: Go back.
 
 
