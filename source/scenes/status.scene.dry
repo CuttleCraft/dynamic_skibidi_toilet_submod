@@ -151,6 +151,13 @@ Inflation: [+ inflation_2 +]%<br>
 Economic growth: [+ economic_growth_2 +]%
 
 @politics
+on-arrival: {! 
+Q.printer = "";
+for (var i = 0; i<Q.parties.length-1; i += 1) { 
+Q.selected_party = Q.parties[i];
+Q.printer += "<span style=\"color:" + Q.partyColors[Q.selected_party] + "/">" + "**[+ " +  "abc<br>"; 
+} 
+!}
 
 = Inter-party Relations
 
