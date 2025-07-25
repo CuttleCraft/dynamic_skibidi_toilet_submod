@@ -257,6 +257,29 @@ Q.parties = ['spd', 'kpd', 'z', 'bvp', 'dhp', 'ddp', 'dvp', 'dnvp', 'nsdap', 'wp
 Q.parties_graph = ['spd', 'kpd', 'z', 'bvp', 'dhp', 'ddp', 'dvp', 'dnvp', 'nsdap', 'wp', 'vrp', 'dbp', 'cnblp', 'other'];
 */
 
+var partyColors = {};
+
+for (const sheet of document.styleSheets) {
+  if (sheet.href && sheet.href.includes('game.css')) {
+    try {
+      for (const rule of sheet.cssRules) {
+        if (rule.selectorText && rule.selectorText.startsWith('.seat.')) {
+          const match = rule.selectorText.match(/\.seat\.([a-z0-9]+)/);
+          if (match) {
+            const party = match[1];
+            const color = rule.style.fill || rule.style.color;
+            if (color && /^#[0-9a-fA-F]{6}$/.test(color)) {
+              partyColors[party] = color;
+            }
+          }
+        }
+      }
+    } catch (e) {
+      console.warn('Could not access CSS rules from game.css:', e);
+    }
+  }
+}
+
 Q.communist_support = 0;
 Q.socialist_support = 0;
 Q.nationalist_support = 0;
